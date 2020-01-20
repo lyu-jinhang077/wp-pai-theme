@@ -1,0 +1,55 @@
+// breakpoints
+$break-sm: 540px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-xxl: 1600px;
+
+// <540
+@mixin mobile-sm-down() {
+  @media (max-width: $break-sm - 1) {
+    @content;
+  }
+}
+
+// <768
+@mixin mobile-down() {
+  @media (max-width: $break-md - 1) {
+    @content;
+  }
+}
+
+// >=768
+@mixin tablet-up() {
+  @media (min-width: $break-md) {
+    @content;
+  }
+}
+
+// <992
+@mixin tablet-down() {
+  @media (max-width: $break-lg - 1) {
+    @content;
+  }
+}
+
+// >=992
+@mixin desktop-up() {
+  @media (min-width: $break-lg) {
+    @content;
+  }
+}
+
+// >=1200
+@mixin desktop-xl-up() {
+  @media (min-width: $break-xl) {
+    @content;
+  }
+}
+
+// >=1600
+@mixin desktop-xxl-up() {
+  @media (min-width: $break-xxl) {
+    @content;
+  }
+}

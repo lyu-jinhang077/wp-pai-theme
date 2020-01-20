@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+#menu-primary-menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  & > .menu-item {
+    padding: 10px 20px;
+    position: relative;
+
+    & > .sub-menu {
+      display: none;
+      list-style: none;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      padding-left: 0;
+      border: 1px solid $border;
+      width: 140px;
+
+      & > .menu-item {
+        background: $background;
+        padding: 6px 10px;
+        border-top: 1px solid $border;
+        display: block;
+        word-break: break-all;
+        font-size: 16px;
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
+
+    &:hover {
+      & > .sub-menu {
+        display: block;
+      }
+    }
+  }
+}

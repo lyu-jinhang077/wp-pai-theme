@@ -10,6 +10,9 @@
 <html>
 <head>
   <title><?php the_title(); ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="PAI Wordpress Theme">
+  <meta scale
   <?php
   wp_head();
   pai_global_styles();

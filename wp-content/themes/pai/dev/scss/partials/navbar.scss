@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "../_variables";
 
 #menu-primary-menu {
   display: flex;
@@ -17,8 +17,8 @@
       display: none;
       list-style: none;
       position: absolute;
-      left: 0;
-      top: 40px;
+      left: 10px;
+      top: 45px;
       padding-left: 0;
       border: 1px solid $border;
       width: 140px;
@@ -41,6 +41,43 @@
       & > .sub-menu {
         display: block;
       }
+    }
+  }
+}
+
+.mobnav {
+  li {
+    list-style: none;
+    padding: 4px 0;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+
+  &-backdrop {
+    display: none;
+    background: $black50;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  &.sidebar {
+    background: $white;
+    width: 260px;
+    position: fixed;
+    z-index: 21;
+    top: 0;
+    bottom: 0;
+    right: -260px;
+    transition: right .2s ease;
+
+    &.show {
+      right: 0;
     }
   }
 }

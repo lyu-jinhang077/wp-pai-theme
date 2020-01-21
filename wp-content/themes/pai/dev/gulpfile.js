@@ -11,7 +11,10 @@ gulp.task('styles', () => {
   return gulp.src('scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({ add: true })]))
-    .pipe(concat('theme.css'))
+    .pipe(concat('theme.min.css'))
+    .pipe(cssnano({
+      zindex: false
+    }))
     .pipe(gulp.dest('dist/'));
 });
 

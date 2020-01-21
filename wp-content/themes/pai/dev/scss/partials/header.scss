@@ -1,3 +1,16 @@
+@import "../variables";
+
 header {
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.4);
+  background: $background;
+  z-index: 10;
+  top: -50px;
+  transition: top .3s ease;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }

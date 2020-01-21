@@ -1,0 +1,30 @@
+@import '../variables';
+
+footer {
+  padding: 40px 20px 10px;
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    li {
+      a {
+        color: $white;
+        font-size: .8em;
+      }
+    }
+
+    li + li {
+      margin-left: 30px;
+    }
+  }
+}

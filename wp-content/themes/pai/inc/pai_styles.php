@@ -38,6 +38,10 @@ function pai_global_styles() {
     .pai-bc-secondary {
       background-color: <?= $colors['secondary'] ?> !important;
     }
+
+    footer {
+      background-color: <?= $colors['primary'] ?>;
+    }
     h1,
     h2,
     h3,

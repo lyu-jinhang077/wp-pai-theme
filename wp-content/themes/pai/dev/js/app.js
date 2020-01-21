@@ -23,9 +23,9 @@ var _app = {
 
   onScroll: function() {
     if (window.scrollY > 100) {
-      $('header').addClass('sticky');
+      $('body').addClass('sticky-header');
     } else {
-      $('header').removeClass('sticky');
+      $('body').removeClass('sticky-header');
     }
   }
 };

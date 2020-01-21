@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../responsive";
 
 header {
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.4);
@@ -6,8 +7,18 @@ header {
   z-index: 10;
   top: -50px;
   transition: top .3s ease;
+}
 
-  &.sticky {
+body.sticky-header {
+  .maincontent {
+    margin-top: 80px;
+
+    @include mobile-down() {
+      margin-top: 56px;
+    }
+  }
+
+  header {
     position: fixed;
     top: 0;
     left: 0;

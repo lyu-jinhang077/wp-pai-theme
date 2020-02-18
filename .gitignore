@@ -8,13 +8,12 @@
 # "mu-plugins", "plugins", "themes" directory
 wp-content/*
 !wp-content/mu-plugins/
-!wp-content/plugins/
 !wp-content/themes/
 
 # ignore these plugins
 wp-content/plugins/hello.php
 wp-content/plugins/index.php
-wp-content/plugins/*-pro/
+!wp-content/plugins/pai-*/
 
 # ignore specific themes
 wp-content/themes/twenty*/
